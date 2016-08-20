@@ -8,7 +8,71 @@
 
     <url>
         <loc>http://blog.submithealth.com/2016/08/19/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/</loc>
-        <lastmod>2016-08-20T05:12:43.777Z</lastmod>
+        <lastmod>2016-08-20T06:04:35.825Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/index/</loc>
+        <lastmod>2016-08-20T05:35:00.789Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/src/bubble_chart/</loc>
+        <lastmod>2016-08-20T05:34:36.317Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/css/bubble_chart/</loc>
+        <lastmod>2016-08-18T05:37:47.789Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/README/</loc>
+        <lastmod>2016-08-14T16:36:18.773Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/css/reset/</loc>
+        <lastmod>2016-08-14T16:36:18.773Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/src/tooltip/</loc>
+        <lastmod>2016-08-14T16:36:18.773Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/lib/d3.min/</loc>
+        <lastmod>2016-08-14T16:36:18.773Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/lib/d3/</loc>
+        <lastmod>2016-08-14T16:36:18.773Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
