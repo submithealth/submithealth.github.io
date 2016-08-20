@@ -406,7 +406,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('data/APC_Excision_2014.csv', display);
+d3.csv('assets/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/data/APC_Excision_2014.csv', display);
 
 // setup the buttons.
 setupButtons();
