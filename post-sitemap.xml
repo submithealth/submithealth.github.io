@@ -8,7 +8,15 @@
 
     <url>
         <loc>http://blog.submithealth.com/2016/08/19/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/</loc>
-        <lastmod>2016-08-20T14:56:31.845Z</lastmod>
+        <lastmod>2016-08-20T15:04:29.285Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/css/bubble_chart/</loc>
+        <lastmod>2016-08-20T14:59:46.537Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,14 +33,6 @@
     <url>
         <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/src/bubble_chart/</loc>
         <lastmod>2016-08-20T05:34:36.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://blog.submithealth.com/2016/08/20/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/css/bubble_chart/</loc>
-        <lastmod>2016-08-18T05:37:47.789Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
