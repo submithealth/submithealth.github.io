@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://blog.submithealth.com/2016/08/19/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/index.html">
 <meta property="og:site_name" content="SubmitHealth">
 <meta property="og:description" content="Ever Wonder what the True Costs of your Medical Procedures are and how they Differ from Practice to Practice?Of all industries that have ever existed, Healthcare has by far one of the most bizarre and">
-<meta property="og:updated_time" content="2016-08-20T06:10:13.681Z">
+<meta property="og:updated_time" content="2016-08-20T06:15:17.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Shocking Truth about what some Healthcare Providers will Charge">
 <meta name="twitter:description" content="Ever Wonder what the True Costs of your Medical Procedures are and how they Differ from Practice to Practice?Of all industries that have ever existed, Healthcare has by far one of the most bizarre and">
@@ -166,8 +166,17 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <h1 id="Ever-Wonder-what-the-True-Costs-of-your-Medical-Procedures-are-and-how-they-Differ-from-Practice-to-Practice"><a href="#Ever-Wonder-what-the-True-Costs-of-your-Medical-Procedures-are-and-how-they-Differ-from-Practice-to-Practice" class="headerlink" title="Ever Wonder what the True Costs of your Medical Procedures are and how they Differ from Practice to Practice?"></a>Ever Wonder what the True Costs of your Medical Procedures are and how they Differ from Practice to Practice?</h1><p>Of all industries that have ever existed, Healthcare has by far one of the most bizarre and confusing billing systems.  They generally consists of a specially trained billing coder compiling a list of services based on your various interactions with your doctor.  The whole process can be quite subjective and unfortunately you typically won’t have a clue what the costs are, or how to compare and baseline with other practices until after the whole ordeal is over.  </p>
 <p>So how do different practices stack up in terms of healthcare costs?  The Centers for Medicare and Medicaid provide data sets for several providers which include average submitted charges and services rendered for various condition.  We thought it would be interesting to plot in an interactive bubble chart to explore the costs, using a <em><em>Level 1 Excision/Biopsy </em></em> as an example, and the visualizations were quite alarming.  Some healthcare providers charge over $15,000 on average, where others are charging less than $100.  You can explore the interactive bubble chart by scrolling over the bubbles or click <em><em>Select States</em></em> to get a sense of how much costs can vary within a few example states.</p>
-<div id="toolbar"><br>   <a href="#" id="all" class="button active">All</a><br>   <a href="#" id="year" class="button">Select States</a><br></div><br><div id="vis"></div>
-
+<p><div id="toolbar"><br>  <a href="#" id="all" class="button active">All</a><br>  <a href="#" id="year" class="button">Select States</a><br></div></p>
+<p><div id="vis"></div></p>
+<script src="lib/d3.js"></script>
+<script src="src/tooltip.js"></script>
+<script src="src/bubble_chart.js"></script>
+<script>
+  var linkElement = document.createElement("link");
+  linkElement.rel = "stylesheet";
+  linkElement.href = "css/reset.css"; 
+  document.head.appendChild(linkElement);
+</script>
 
 <h1 id="Why-does-the-Cost-of-a-Biopsy-Differ-So-Much-from-Practice-to-Practice"><a href="#Why-does-the-Cost-of-a-Biopsy-Differ-So-Much-from-Practice-to-Practice" class="headerlink" title="Why does the Cost of a Biopsy Differ So Much from Practice to Practice?"></a>Why does the Cost of a Biopsy Differ So Much from Practice to Practice?</h1><p>We don’t know for certain.  Each provider tends to charge for services in their own ways.  Some facilities run with a lot more overhead than necessary for your procedure.  </p>
 <h1 id="What-Medicare-and-Your-Insurance-Pays"><a href="#What-Medicare-and-Your-Insurance-Pays" class="headerlink" title="What Medicare and Your Insurance Pays"></a>What Medicare and Your Insurance Pays</h1><p>What’s even more Bizarre about medical billing is that Medicare has already decided what they will pay for these services.  For the example above it’s generally about $200 to $400.  In many instances it’s far less than the bill that the practitioner provides, in which case the practitioner eats the cost.  In some even stranger cases it’s more than the practitioner charges, and the practitioner gets a little extra.  Similarly, insurance typically negotiates a price far less than what the provider bills, leaving the provider charges as meaningless as an MSRP at Marshalls. But what if you don’t have insurance, or you have a crappy high deductable plan?</p>
@@ -180,7 +189,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://blog.submithealth.com/2016/08/19/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/" data-id="cis2scy11000117peax18ruqx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://blog.submithealth.com/2016/08/19/The-Shocking-Truth-about-what-some-Healthcare-Providers-will-Charge/" data-id="cis2sjhxt00012epe95phsf8g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
