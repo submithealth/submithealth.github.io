@@ -1,6 +1,6 @@
-a, a:visited, a:active {
+.button a, a:visited, a:active {
   color: #444;
-}
+}	
 
 .button {
   min-width: 130px;
@@ -10,7 +10,7 @@ a, a:visited, a:active {
   text-align: center;
   font-size: 13px;
   border: 1px solid #999;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .button.active {
