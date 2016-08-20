@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>SubmitHealth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="/* bubbleChart creation function. Returns a function that will
+ * instantiate a new bubble chart given a DOM element to display
+ * it in and a dataset to visualize.
+ *
+ * Organization and style inspi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SubmitHealth">
+<meta property="og:url" content="http://blog.submithealth.com/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/bubble_chart/index.html">
+<meta property="og:site_name" content="SubmitHealth">
+<meta property="og:description" content="/* bubbleChart creation function. Returns a function that will
+ * instantiate a new bubble chart given a DOM element to display
+ * it in and a dataset to visualize.
+ *
+ * Organization and style inspi">
+<meta property="og:updated_time" content="2016-08-20T05:34:36.317Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SubmitHealth">
+<meta name="twitter:description" content="/* bubbleChart creation function. Returns a function that will
+ * instantiate a new bubble chart given a DOM element to display
+ * it in and a dataset to visualize.
+ *
+ * Organization and style inspi">
+    
+
+    
+
+    
+        <link rel="icon" href="/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74352570-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Blog</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Insurance/">Insurance</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/bubble_chart" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/bubble_chart/" class="article-date">
+    <time datetime="2016-08-20T06:01:43.469Z" itemprop="datePublished">2016-08-20</time>
+</a>
+                
+            </div>
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+/* bubbleChart creation function. Returns a function that will
+ * instantiate a new bubble chart given a DOM element to display
+ * it in and a dataset to visualize.
+ *
+ * Organization and style inspired by:
+ * https://bost.ocks.org/mike/chart/
+ *
+ */
+function bubbleChart() {
+  // Constants for sizing
+  var width = 725;
+  var height = 600;
+
+  // tooltip for mouseover functionality
+  var tooltip = floatingTooltip('sh_tooltip', 240);
+
+  // Locations to move bubbles towards, depending
+  // on which view mode is selected.
+  var center = { x: width / 2, y: height / 2 };
+
+  var yearCenters = {
+    WA: { x: width / 3, y: height / 3 }, // { x: width / 3, y: height / 2 },
+    CA: { x: width / 3, y: 2 * height / 3 }, // { x: width / 2, y: height / 2 },
+    NY: { x: 2 * width / 3, y: height / 3 }, // { x: 2 * width / 3, y: height / 2 },
+    FL: { x: 2 * width / 3, y: 2 * height / 3 }
+  };
+
+  // X locations of the year titles.
+  var yearsTitleX = {
+    WA: 123,
+    CA: 123,  // width / 2,
+    NY: width - 123,
+    FL: width - 123
+ };
+
+  // Y locations of the year titles.
+  var yearsTitleY = {
+    WA: 40,
+    CA: 400,
+    NY: 40,
+    FL: 400
+ };
+
+  // Used when setting up force and
+  // moving around nodes
+  var damper = 0.102;
+
+  // These will be set in create_nodes and create_vis
+  var svg = null;
+  var bubbles = null;
+  var nodes = [];
+
+  // Charge function that is called for each node.
+  // Charge is proportional to the diameter of the
+  // circle (which is stored in the radius attribute
+  // of the circle's associated data.
+  // This is done to allow for accurate collision
+  // detection with nodes of different sizes.
+  // Charge is negative because we want nodes to repel.
+  // Dividing by 8 scales down the charge to be
+  // appropriate for the visualization dimensions.
+  function charge(d) {
+    return -Math.pow(d.radius, 2.0) / 8;
+  }
+
+  // Here we create a force layout and
+  // configure it to use the charge function
+  // from above. This also sets some contants
+  // to specify how the force layout should behave.
+  // More configuration is done below.
+  var force = d3.layout.force()
+    .size([width, height])
+    .charge(charge)
+    .gravity(-0.01)
+    .friction(0.9);
+
+
+  // Nice looking colors - no reason to buck the trend
+  var fillColor = d3.scale.ordinal()
+    .domain(['low', 'medium', 'high'])
+    .range(['#9FB8AD', '#C287E8', '#FF8360']);
+
+  // Sizes bubbles based on their area instead of raw radius
+  var radiusScale = d3.scale.pow()
+    .exponent(0.5)
+    .range([2, 35]);
+
+  /*
+   * This data manipulation function takes the raw data from
+   * the CSV file and converts it into an array of node objects.
+   * Each node will store data and visualization values to visualize
+   * a bubble.
+   *
+   * rawData is expected to be an array of data objects, read in from
+   * one of d3's loading functions like d3.csv.
+   *
+   * This function returns the new node array, with a node in that
+   * array for each element in the rawData input.
+   */
+  function createNodes(rawData) {
+    // Use map() to convert raw data into node data.
+    // Checkout http://learnjsdata.com/ for more on
+    // working with data.
+    var myNodes = rawData.map(function (d) {
+      return {
+        id: d.id,
+        radius: radiusScale(+d.Average_Estimated_Submitted_Charges),
+        value: d.Average_Estimated_Submitted_Charges,
+        name: d.Provider_City,
+        org: d.Outpatient_Services,
+        group: d.Provider_City,
+        year: d.Provider_State,
+        x: Math.random() * 900,
+        y: Math.random() * 800
+      };
+    });
+
+    // sort them to prevent occlusion of smaller nodes.
+    myNodes.sort(function (a, b) { return b.value - a.value; });
+
+    return myNodes;
+  }
+
+  /*
+   * Main entry point to the bubble chart. This function is returned
+   * by the parent closure. It prepares the rawData for visualization
+   * and adds an svg element to the provided selector and starts the
+   * visualization creation process.
+   *
+   * selector is expected to be a DOM element or CSS selector that
+   * points to the parent element of the bubble chart. Inside this
+   * element, the code will add the SVG continer for the visualization.
+   *
+   * rawData is expected to be an array of data objects as provided by
+   * a d3 loading function like d3.csv.
+   */
+  var chart = function chart(selector, rawData) {
+    // Use the max Average_Estimated_Submitted_Charges in the data as the max in the scale's domain
+    // note we have to ensure the Average_Estimated_Submitted_Charges is a number by converting it
+    // with `+`.
+    var maxAmount = d3.max(rawData, function (d) { return +d.Average_Estimated_Submitted_Charges; });
+    radiusScale.domain([0, maxAmount]);
+
+    nodes = createNodes(rawData);
+    // Set the force's nodes to our newly created nodes array.
+    force.nodes(nodes);
+
+    // Create a SVG element inside the provided selector
+    // with desired size.
+    svg = d3.select(selector)
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .attr('viewBox', '0 0 725 600')
+      .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    // Bind nodes data to what will become DOM elements to represent them.
+    bubbles = svg.selectAll('.bubble')
+      .data(nodes, function (d) { return d.id; });
+
+    // Create new circle elements each with class `bubble`.
+    // There will be one circle.bubble for each object in the nodes array.
+    // Initially, their radius (r attribute) will be 0.
+    bubbles.enter().append('circle')
+      .classed('bubble', true)
+      .attr('r', 0)
+      .attr('fill', function (d) { return fillColor(d.group); })
+      .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
+      .attr('stroke-width', 1)
+      .style('opacity','.7')
+      .on('mouseover', showDetail)
+      .on('mouseout', hideDetail);
+
+    // Fancy transition to make bubbles appear, ending with the
+    // correct radius
+    bubbles.transition()
+      .duration(2000)
+      .attr('r', function (d) { return d.radius; });
+
+    // Set initial layout to single group.
+    groupBubbles();
+  };
+
+  /*
+   * Sets visualization in "single group mode".
+   * The year labels are hidden and the force layout
+   * tick function is set to move all nodes to the
+   * center of the visualization.
+   */
+  function groupBubbles() {
+    hideYears();
+
+    force.on('tick', function (e) {
+      bubbles.each(moveToCenter(e.alpha))
+        .attr('cx', function (d) { return d.x; })
+        .attr('cy', function (d) { return d.y; });
+    });
+
+    force.start();
+  }
+
+  /*
+   * Helper function for "single group mode".
+   * Returns a function that takes the data for a
+   * single node and adjusts the position values
+   * of that node to move it toward the center of
+   * the visualization.
+   *
+   * Positioning is adjusted by the force layout's
+   * alpha parameter which gets smaller and smaller as
+   * the force layout runs. This makes the impact of
+   * this moving get reduced as each node gets closer to
+   * its destination, and so allows other forces like the
+   * node's charge force to also impact final location.
+   */
+  function moveToCenter(alpha) {
+    return function (d) {
+      d.x = d.x + (center.x - d.x) * damper * alpha;
+      d.y = d.y + (center.y - d.y) * damper * alpha;
+    };
+  }
+
+  /*
+   * Sets visualization in "split by year mode".
+   * The year labels are shown and the force layout
+   * tick function is set to move nodes to the
+   * yearCenter of their data's year.
+   */
+  function splitBubbles() {
+    showYears();
+
+    force.on('tick', function (e) {
+      bubbles.each(moveToYears(e.alpha))
+        .attr('cx', function (d) { return d.x; })
+        .attr('cy', function (d) { return d.y; });
+    });
+
+    force.start();
+  }
+
+  /*
+   * Helper function for "split by year mode".
+   * Returns a function that takes the data for a
+   * single node and adjusts the position values
+   * of that node to move it the year center for that
+   * node.
+   *
+   * Positioning is adjusted by the force layout's
+   * alpha parameter which gets smaller and smaller as
+   * the force layout runs. This makes the impact of
+   * this moving get reduced as each node gets closer to
+   * its destination, and so allows other forces like the
+   * node's charge force to also impact final location.
+   */
+  function moveToYears(alpha) {
+    return function (d) {
+
+      if (yearCenters[d.year]){
+      var target = yearCenters[d.year];
+      } else {
+      var target = { x: width / 2, y: height / 2 };
+      }
+
+
+      d.x = d.x + (target.x - d.x) * damper * alpha * 1.1;
+      d.y = d.y + (target.y - d.y) * damper * alpha * 1.1;
+    };
+  }
+
+  /*
+   * Hides Year title displays.
+   */
+  function hideYears() {
+    svg.selectAll('.year').remove();
+  }
+
+  /*
+   * Shows Year title displays.
+   */
+  function showYears() {
+    // Another way to do this would be to create
+    // the year texts once and then just hide them.
+    var yearsData = d3.keys(yearsTitleX);
+    var years = svg.selectAll('.year')
+      .data(yearsData);
+
+    years.enter().append('text')
+      .attr('class', 'year')
+      .attr('x', function (d) { return yearsTitleX[d]; })
+      .attr('y', function (d) { return yearsTitleY[d]; })
+      .attr('text-anchor', 'middle')
+      .text(function (d) { return d; });
+  }
+
+
+  /*
+   * Function called on mouseover to display the
+   * details of a bubble in the tooltip.
+   */
+  function showDetail(d) {
+    // change outline to indicate hover state.
+    d3.select(this).attr('stroke', 'black');
+
+    var content = '<span class="name">Provider Location: </span><span class="value">' +
+                  d.name + ", " + d.year +
+                  '</span><br>' +
+                  '<span class="name">Amount Charged: </span><span class="value">$' +
+                  addCommas(parseFloat(Math.round(d.value * 100) / 100).toFixed(2)) +
+                  '</span><br>' +
+                  '<span class="name">Services Performed: </span><span class="value">' +
+                  d.org +
+                  '</span>';
+    tooltip.showTooltip(content, d3.event);
+  }
+
+  /*
+   * Hides tooltip
+   */
+  function hideDetail(d) {
+    // reset outline
+    d3.select(this)
+      .attr('stroke', d3.rgb(fillColor(d.group)).darker());
+
+    tooltip.hideTooltip();
+  }
+
+  /*
+   * Externally accessible function (this is attached to the
+   * returned chart function). Allows the visualization to toggle
+   * between "single group" and "split by year" modes.
+   *
+   * displayName is expected to be a string and either 'year' or 'all'.
+   */
+  chart.toggleDisplay = function (displayName) {
+    if (displayName === 'year') {
+      splitBubbles();
+    } else {
+      groupBubbles();
+    }
+  };
+
+
+  // return the chart function from closure.
+  return chart;
+}
+
+/*
+ * Below is the initialization code as well as some helper functions
+ * to create a new bubble chart instance, load the data, and display it.
+ */
+
+var myBubbleChart = bubbleChart();
+
+/*
+ * Function called once data is loaded from CSV.
+ * Calls bubble chart function to display inside #vis div.
+ */
+function display(error, data) {
+  if (error) {
+    console.log(error);
+  }
+
+  myBubbleChart('#vis', data);
+}
+
+/*
+ * Sets up the layout buttons to allow for toggling between view modes.
+ */
+function setupButtons() {
+  d3.select('#toolbar')
+    .selectAll('.button')
+    .on('click', function () {
+      // Remove active class from all buttons
+      d3.selectAll('.button').classed('active', false);
+      // Find the button just clicked
+      var button = d3.select(this);
+
+      // Set it as the active button
+      button.classed('active', true);
+
+      // Get the id of the button
+      var buttonId = button.attr('id');
+
+      // Toggle the bubble chart based on
+      // the currently clicked button.
+      myBubbleChart.toggleDisplay(buttonId);
+    });
+}
+
+/*
+ * Helper function to convert a number into a string
+ * and add commas to it to improve presentation.
+ */
+function addCommas(nStr) {
+  nStr += '';
+  var x = nStr.split('.');
+  var x1 = x[0];
+  var x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+  }
+
+  return x1 + x2;
+}
+
+// Load the data.
+d3.csv('data/APC_Excision_2014.csv', display);
+
+// setup the buttons.
+setupButtons();
+
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://blog.submithealth.com/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/bubble_chart/" data-id="cis3bkypw000jowpek8xuvsum" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/company/submithealth" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/submithealth" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/SubmitHealth/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/102668429213225250203" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="envelope" href="http://eepurl.com/caqZtr" target="_blank">
+                        <i class="icon fa fa-envelope"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/index/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            (no title)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/css/reset/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title"></p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/css/bubble_chart/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/css/bubble_chart/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-08-20T14:59:46.537Z" itemprop="datePublished">2016-08-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/lib/d3/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/lib/d3/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-08-20T06:01:43.469Z" itemprop="datePublished">2016-08-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/lib/d3.min/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/lib/d3.min/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-08-20T06:01:43.469Z" itemprop="datePublished">2016-08-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/tooltip/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/tooltip/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-08-20T06:01:43.469Z" itemprop="datePublished">2016-08-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/index/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/index/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-08-20T06:01:43.469Z" itemprop="datePublished">2016-08-20</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Insurance/">Insurance</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">11</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/About/">About</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Consumer-Health-Cost-Comparisons/">Consumer Health, Cost Comparisons</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Effective/">Effective</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Insurance-ConsumerHealth/">Insurance, ConsumerHealth,</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Introduction/">Introduction</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/About/" style="font-size: 10px;">About</a> <a href="/tags/Consumer-Health-Cost-Comparisons/" style="font-size: 10px;">Consumer Health, Cost Comparisons</a> <a href="/tags/Effective/" style="font-size: 10px;">Effective</a> <a href="/tags/Insurance-ConsumerHealth/" style="font-size: 10px;">Insurance, ConsumerHealth,</a> <a href="/tags/Introduction/" style="font-size: 10px;">Introduction</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://submithealth.com/">Our Services</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2016 SubmitHealth</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'submithealth';
+    
+    
+    var disqus_url = 'http://blog.submithealth.com/2016/08/20/Why-Are-Some-Healthcare-Providers-Charging-So-Much-More-Than-Others/src/bubble_chart/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
