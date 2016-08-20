@@ -28,18 +28,18 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    WA: 123,
-    CA: 123,  // width / 2,
-    NY: width - 123,
-    FL: width - 123
+    WA: 50,
+    CA: 50,  // width / 2,
+    NY: width - 50,
+    FL: width - 50
  };
 
   // Y locations of the year titles.
   var yearsTitleY = {
     WA: 40,
-    CA: 400,
+    CA: 450,
     NY: 40,
-    FL: 400
+    FL: 450
  };
 
   // Used when setting up force and
