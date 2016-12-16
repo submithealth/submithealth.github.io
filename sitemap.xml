@@ -12,13 +12,8 @@
     </sitemap>
 
     <sitemap>
-        <loc>http://blog.submithealth.com/category-sitemap.xml</loc>
-        <lastmod>2016-12-15T07:00:57.424Z</lastmod>
-    </sitemap>
-
-    <sitemap>
         <loc>http://blog.submithealth.com/tag-sitemap.xml</loc>
-        <lastmod>2016-12-15T07:00:57.424Z</lastmod>
+        <lastmod>2016-12-15T07:00:57.511Z</lastmod>
     </sitemap>
 
 </sitemapindex>
