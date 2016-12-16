@@ -3,12 +3,17 @@
 
     <sitemap>
         <loc>http://blog.submithealth.com/post-sitemap.xml</loc>
-        <lastmod>2016-12-16T04:04:32.599Z</lastmod>
+        <lastmod>2016-12-16T04:16:08.139Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://blog.submithealth.com/page-sitemap.xml</loc>
         
+    </sitemap>
+
+    <sitemap>
+        <loc>http://blog.submithealth.com/tag-sitemap.xml</loc>
+        <lastmod>2016-12-16T04:16:08.139Z</lastmod>
     </sitemap>
 
 </sitemapindex>
