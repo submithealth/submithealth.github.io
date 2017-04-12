@@ -10,14 +10,21 @@
 
     <url>
         <loc>http://blog.submithealth.com/tags/Affordable-Care/</loc>
-        <lastmod>2017-03-22T14:08:17.383Z</lastmod>
+        <lastmod>2017-04-12T03:24:04.440Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://blog.submithealth.com/tags/AHCA/</loc>
-        <lastmod>2017-03-22T14:08:17.383Z</lastmod>
+        <lastmod>2017-04-12T03:24:04.440Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.submithealth.com/tags/Administrative-Tools/</loc>
+        <lastmod>2017-04-12T03:50:36.964Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
